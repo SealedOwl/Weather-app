@@ -3,11 +3,12 @@
 	--grey: #424242;
 	--grey-200: #eeeeee;
 	--grey-300: #dddddd;
-	--grey-400: #bdbdbd;
+	--light-grey: #bdbdbd;
 	--grey-600: #757575;
 	--grey-800: #424242;
 
 	--font-md: 1.3rem;
+	--font-x-lg: 5rem;
 }
 
 * {
@@ -97,4 +98,72 @@ body {
 #search-btn:hover {
 	background-color: var(--light);
 	color: black;
+}
+
+/* Weather Details  */
+
+.weather-status {
+	margin-top: 1em;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.weather-temp-status,
+.weather-temp,
+.min-max-details,
+.min,
+.max {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.min-max-details {
+	align-items: flex-end;
+}
+
+.min,
+.max {
+	justify-content: center;
+	align-items: center;
+}
+
+.min-max {
+	display: flex;
+	gap: 2em;
+}
+
+.weather-temp {
+	justify-content: flex-end;
+}
+
+.weather-status {
+	display: flex;
+	gap: 1em;
+}
+
+.weather-status > img {
+	width: 150px;
+	height: auto;
+}
+
+.weather-temp > .temp {
+	font-size: var(--font-x-lg);
+	font-weight: 900;
+}
+
+.min-max-temp {
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+.text-grey {
+	color: var(--light-grey);
+}
+
+.celsius {
+	vertical-align: super;
+	font-size: smaller;
 }
