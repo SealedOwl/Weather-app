@@ -7,6 +7,7 @@
 	--grey-600: #757575;
 	--grey-800: #424242;
 
+	--font-sm: 1rem;
 	--font-md: 1.3rem;
 	--font-x-lg: 5rem;
 }
@@ -100,7 +101,7 @@ body {
 	color: black;
 }
 
-/* Weather Details  */
+/* Weather Status  */
 
 .weather-status {
 	margin-top: 1em;
@@ -166,4 +167,44 @@ body {
 .celsius {
 	vertical-align: super;
 	font-size: smaller;
+}
+
+/* Weather Details  */
+
+.weather-details {
+	margin-top: 3em;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: min-content;
+	gap: 3em;
+}
+
+.weather-detail-card {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.weather-detail {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 7px;
+}
+
+.weather-definition {
+	color: var(--light-grey);
+	font-size: var(--font-sm);
+}
+
+@media (max-width: 750px) {
+	.weather-status {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.weather-details {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }

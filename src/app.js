@@ -1,4 +1,5 @@
 import renderSearchForm from "./components/searchForm";
+import renderWeatherDetails from "./components/weatherDetails";
 import renderweatherStatus from "./components/weatherStatus";
 
 export default function renderApp() {
@@ -6,8 +7,10 @@ export default function renderApp() {
 	const root = document.querySelector("#root");
 
 	const searchForm = renderSearchForm();
-	const weatherDetails = renderweatherStatus();
+	const weatherStatus = renderweatherStatus();
+	const weatherDetails = renderWeatherDetails();
 
 	root.appendChild(searchForm);
+	root.appendChild(weatherStatus);
 	root.appendChild(weatherDetails);
 }

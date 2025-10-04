@@ -6,7 +6,7 @@ export default function renderSearchForm() {
     <form id="search-form">
         <div class="input-container">
            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="search-input" autocomplete="off" placeholder="Search for a location..." />
+            <input type="text" id="search-input" autocomplete="off" placeholder="Search for a city..." />
         </div>
         <button type="submit" id="search-btn">Search</button>
     </form>
