@@ -1,5 +1,6 @@
 import renderSearchForm from "./components/searchForm";
 import renderWeatherDetails from "./components/weatherDetails";
+import renderWeatherHourly from "./components/weatherHourly";
 import renderweatherStatus from "./components/weatherStatus";
 
 export default function renderApp() {
@@ -16,9 +17,13 @@ export default function renderApp() {
 	const weatherDetails = document.createElement("section");
 	weatherDetails.classList.add("weather-details");
 
+	const weatherHourly = document.createElement("section");
+	weatherHourly.classList.add("weather-hourly");
+
 	root.appendChild(searchFormInput);
 	root.appendChild(weatherStatus);
 	root.appendChild(weatherDetails);
+	root.appendChild(weatherHourly);
 
 	async function getWeatherData(location) {
 		try {
@@ -40,6 +45,7 @@ export default function renderApp() {
 
 			await renderweatherStatus(weatherData);
 			renderWeatherDetails(weatherData);
+			await renderWeatherHourly(weatherData);
 		} catch (err) {
 			console.error(err);
 		}

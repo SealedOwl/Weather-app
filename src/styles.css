@@ -5,7 +5,6 @@
 	--grey-300: #dddddd;
 	--light-grey: #bdbdbd;
 	--grey-600: #757575;
-	--grey-800: #424242;
 
 	--font-sm: 1rem;
 	--font-md: 1.3rem;
@@ -197,6 +196,35 @@ body {
 	font-size: var(--font-sm);
 }
 
+/* Weather Hourly  */
+
+.weather-hourly {
+	width: 100%;
+	margin-top: 3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1em;
+}
+
+.hourly-cards-container {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	gap: 10px;
+}
+
+.hourly-card {
+	padding: 10px;
+	background-color: var(--grey);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--font-sm);
+	font-weight: 500;
+}
+
 @media (max-width: 750px) {
 	.weather-status {
 		flex-direction: column;
@@ -205,6 +233,16 @@ body {
 	}
 
 	.weather-details {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.hourly-cards-container {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 450px) {
+	.hourly-cards-container {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
