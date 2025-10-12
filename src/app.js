@@ -2,6 +2,7 @@ import renderSearchForm from "./components/searchForm";
 import renderWeatherDetails from "./components/weatherDetails";
 import renderWeatherHourly from "./components/weatherHourly";
 import renderweatherStatus from "./components/weatherStatus";
+import renderWeatherWeek from "./components/weatherWeek";
 
 export default function renderApp() {
 	const MY_API = `VSXG9P6G6GJP9YCB4QZZ7BA4W`;
@@ -20,10 +21,14 @@ export default function renderApp() {
 	const weatherHourly = document.createElement("section");
 	weatherHourly.classList.add("weather-hourly");
 
+	const weatherWeekly = document.createElement("section");
+	weatherWeekly.classList.add("weather-weekly");
+
 	root.appendChild(searchFormInput);
 	root.appendChild(weatherStatus);
 	root.appendChild(weatherDetails);
 	root.appendChild(weatherHourly);
+	root.appendChild(weatherWeekly);
 
 	async function getWeatherData(location) {
 		try {
@@ -46,6 +51,7 @@ export default function renderApp() {
 			await renderweatherStatus(weatherData);
 			renderWeatherDetails(weatherData);
 			await renderWeatherHourly(weatherData);
+			renderWeatherWeek();
 		} catch (err) {
 			console.error(err);
 		}

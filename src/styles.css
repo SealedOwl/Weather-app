@@ -1,13 +1,11 @@
 :root {
 	--light: #fafafa;
 	--grey: #424242;
-	--grey-200: #eeeeee;
-	--grey-300: #dddddd;
 	--light-grey: #bdbdbd;
-	--grey-600: #757575;
 
 	--font-sm: 1rem;
 	--font-md: 1.3rem;
+	--font-lg: 2.2rem;
 	--font-x-lg: 5rem;
 }
 
@@ -223,6 +221,62 @@ body {
 	align-items: center;
 	font-size: var(--font-sm);
 	font-weight: 500;
+}
+
+/* Weather Weekly  */
+.weather-weekly {
+	width: 100%;
+	margin-top: 3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1em;
+}
+
+.weather-week-cards-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 1em;
+}
+
+.weekDay-card {
+	padding: 10px 0px;
+	background-color: var(--grey);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
+
+.weekDay-status {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.weekDay-status > .day {
+	font-size: var(--font-sm);
+	font-weight: 700;
+}
+
+.weekDay-status > .date {
+	font-size: var(--font-sm);
+}
+
+.weatherDay-minmax {
+	display: flex;
+	gap: 1em;
+}
+
+.weatherDay-minmax > .minmax {
+	display: flex;
+	flex-direction: column;
+}
+
+.weatherDay-minmax > .minmax > .minmax-temp {
+	font-size: var(--font-lg);
+	font-weight: 800;
 }
 
 @media (max-width: 750px) {
