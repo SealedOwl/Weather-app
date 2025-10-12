@@ -12,8 +12,8 @@ export default async function renderweatherStatus(data) {
 		iconPath = fallBack.default;
 	}
 
-	console.log(iconName);
-	console.log(iconPath);
+	// console.log(iconName);
+	// console.log(iconPath);
 
 	weatherStatus.innerHTML = "";
 

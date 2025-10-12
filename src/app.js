@@ -51,7 +51,7 @@ export default function renderApp() {
 			await renderweatherStatus(weatherData);
 			renderWeatherDetails(weatherData);
 			await renderWeatherHourly(weatherData);
-			renderWeatherWeek();
+			await renderWeatherWeek(weatherData);
 		} catch (err) {
 			console.error(err);
 		}
